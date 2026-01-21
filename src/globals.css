@@ -1,0 +1,15 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.document-page-bg {
+  background: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.enterprise-shadow {
+  box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.08);
+}
