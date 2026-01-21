@@ -52,7 +52,7 @@ CREATED → APPROVED → SENT → SIGNED → LOCKED
 
 ---
 
-##  Architecture
+##  Architecture and decision design
 
 ###  Tech Stack
 - **React** — component-based UI and routing
@@ -61,6 +61,27 @@ CREATED → APPROVED → SENT → SIGNED → LOCKED
 - **Tailwind CSS** — fast UI development and consistent styling
 - **LocalStorage** — mock persistence layer
 
+### 🔹 Component-Based Architecture
+-Pages are separated by responsibility:
+  - Dashboard.jsx
+  - BlueprintCreator.jsx
+  - BlueprintList.jsx
+  - ContractCreator.jsx
+  - ContractManagement.jsx
+-Reusable layout is handled by: layout.jsx
+
+
+### 🔹 Centralized Persistence Layer
+All storage logic is handled by: storages.js
+This avoids mixing persistence logic with UI components and allows easy replacement with real APIs in the future.
+
+### 🔹 Controlled State Transitions
+Contract lifecycle rules are centralized in: constants.js
+
+This ensures:
+- No invalid transitions
+- Easy modification of lifecycle rules
+- Consistent UI behavior
 ---
 ### State Management Approach
 
@@ -81,9 +102,28 @@ This separation ensures:
 This approach avoids unnecessary global state libraries (Redux/Context) while maintaining clean data flow suitable for the scale of this application.
 
 
-### To Run
-- Download the zip folder.
-- unzip and open in code editor
-- commands 1) npm install,
-           2) npm run dev
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/contractFlow.git
+cd contractFlow
+```
+OR Download ZIP
+
+Click on Code → Download ZIP on GitHub
+
+Extract the ZIP file
+
+Open the folder in VS Code
+
+Install dependencies  - npm install
+
+Run development server - npm run dev
+
+Open in browser - http://localhost:5173
 
