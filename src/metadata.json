@@ -1,0 +1,5 @@
+{
+  "name": "ContractFlow",
+  "description": "A comprehensive contract management platform for creating blueprints, generating contracts, and managing their lifecycle from creation to locking.",
+  "requestFramePermissions": []
+}
