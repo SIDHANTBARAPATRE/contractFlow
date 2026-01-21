@@ -56,6 +56,7 @@ CREATED → APPROVED → SENT → SIGNED → LOCKED
 
 ###  Tech Stack
 - **React** — component-based UI and routing
+- **Javascript** - functional logic
 - **React Router** — page navigation
 - **Tailwind CSS** — fast UI development and consistent styling
 - **LocalStorage** — mock persistence layer
@@ -85,3 +86,4 @@ This approach avoids unnecessary global state libraries (Redux/Context) while ma
 - unzip and open in code editor
 - commands 1) npm install,
            2) npm run dev
+
